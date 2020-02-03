@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var nom="H3ctor Pascual"
+            var nameArr=nom.split('')
+            for (n in nameArr){
+                if(/[A-Za-z0-9_]/.test(nameArr[n])){                   
+                    if (/[aeiou]/.test(nameArr[n])) {
+                        console.log("He trobat la VOCAL: "+nameArr[n])
+                    } else if (/[0-9]/.test(nameArr[n])){
+                        console.log("Els noms de persones no contenen el número: "+nameArr[n])
+                    } else {
+                        console.log("He trobat la CONSONANT: "+nameArr[n])
+                    }
+                } else {
+                    console.log("'"+nameArr[n]+"'"+" no es un caracter alfanumérico!!!")
+                }
+            }
+        </script>
+    </body>
+</html>
