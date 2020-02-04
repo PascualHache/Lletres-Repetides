@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var name="Hector".toUpperCase();
+            var surname="Pascual".toUpperCase();
+            var nameArr=name.split('');
+            var surNameArr=surname.split('');
+            var fullNameArr=[];
+            fullNameArr= nameArr.concat(' ');
+            Array.prototype.push.apply(fullNameArr, surNameArr);
+            console.log(fullNameArr);
+        </script>
+    </body>
+</html>
