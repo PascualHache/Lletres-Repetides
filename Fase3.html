@@ -5,22 +5,10 @@
     </head>
     <body>
         <script>
-            var nom="Heeector Pascual".toUpperCase();
-            var nameArr=nom.split('');
-            var dictCounter = {};
-            for (n in nameArr){
-                if(/[A-Za-z]/.test(nameArr[n])){
-                    if (nameArr[n] in dictCounter){
-                        dictCounter[nameArr[n]]=dictCounter[nameArr[n]]+1;
-
-                    } else {
-                        dictCounter[nameArr[n]]=1;
-                    }
-                } else {
-                    console.log("'"+nameArr[n]+"'"+" no es un caracter alfanumérico!!!")
-                }
-            }
-            console.log(dictCounter);
+            var nom="Heeector Pascual".toUpperCase().split('');
+            var counts = {};
+            nom.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
+            console.log(counts);
         </script>
     </body>
 </html>
